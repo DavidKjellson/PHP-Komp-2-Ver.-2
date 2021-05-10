@@ -10,7 +10,7 @@
 
 - [ ] En besökare ska kunna se alla lag, klicka på ett lag och se vilka som är med i det.
 
-- [ ] Använd migration-filer för att skapa databastabellerna.
+- [x] Använd migration-filer för att skapa databastabellerna.
 
 - [ ] Låt webbplatsens URIer följa standard för REST API
 
