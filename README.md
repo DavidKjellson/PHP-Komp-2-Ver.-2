@@ -2,7 +2,7 @@
 
 - [ ] Skapa en webbplats till IK Svalan - OBS. Ingen auth-funktionalitet.
 
-- [ ] En medlem ska ha egenskaperna firstname, lastname, birthday, email och member_fee.
+- [x] En medlem ska ha egenskaperna firstname, lastname, birthday, email och member_fee.
 
 - [ ] De tre sektionerna som finns är fotboll, skidor och gymnastik.
 
@@ -16,6 +16,6 @@
 
 - [ ] Låt webbplatsen följa MVC-modellen
 
-- [ ] Använd seeders och factories för att skapa medlemmar och lag. 100 medlemmar och 15 lag/träningsgrupper.
+- [x] Använd seeders och factories för att skapa medlemmar och lag. 100 medlemmar och 15 lag/träningsgrupper.
 
 Inlämning som zippad fil samt ev github-länk på ITHS-distans.
