@@ -35,7 +35,6 @@ class TeamFactory extends Factory
     {
         return [
             'team_name' => $this->faker->name,
-
         ];
     }
 }
