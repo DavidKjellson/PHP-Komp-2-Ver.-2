@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $teams = \App\Models\Team::all();
+    return view('welcome', ['teams' => $teams]);
 });
