@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ActivityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,5 @@ Route::get('/', function () {
     $teams = \App\Models\Team::all();
     return view('welcome', ['teams' => $teams]);
 });
+
+Route::get('insertactivities', [ActivityController::class, 'index']);
