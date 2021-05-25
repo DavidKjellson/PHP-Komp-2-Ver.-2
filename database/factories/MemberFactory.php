@@ -26,7 +26,8 @@ class MemberFactory extends Factory
             'lastname' => $this->faker->lastName(),
             'birthday' => $this->faker->date,
             'email' => $this->faker->email,
-            'member_fee' => $this->faker->randomNumber()
+            'member_fee' => $this->faker->randomNumber(),
+            'team_id' => $this->faker->unique(true)->numberBetween(1, 15)
         ];
     }
 }

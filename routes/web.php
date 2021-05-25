@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\WelcomeController;
 
 /*
@@ -18,3 +19,5 @@ use App\Http\Controllers\WelcomeController;
 Route::get('/', [WelcomeController::class, 'welcome']);
 
 Route::get('insertactivities', [ActivityController::class, 'index']);
+
+Route::get('join-tables', [TeamMemberController::class, 'index']);
