@@ -35,6 +35,7 @@ class TeamFactory extends Factory
     {
         return [
             'team_name' => $this->faker->streetName,
+            'activity_id' => $this->faker->unique(true)->numberBetween(1, 3)
         ];
     }
 }

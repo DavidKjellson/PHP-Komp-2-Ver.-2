@@ -20,7 +20,7 @@ class CreateMembersTable extends Migration
             $table->date('birthday');
             $table->string('email');
             $table->integer('member_fee');
-            $table->integer('team_id');
+            // $table->integer('team_id');
         });
     }
 

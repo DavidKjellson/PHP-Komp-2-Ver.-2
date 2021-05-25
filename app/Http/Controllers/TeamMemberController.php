@@ -10,8 +10,11 @@ class TeamMemberController extends Controller
     public function index()
     {
         $data = DB::table('members')
-            ->join('teams', 'teams.id', '=', 'members.team_id')
-            ->select('members.*')
+            ->join('team_members', 'team_members.member_id', '=', 'members.id')
+            ->join('teams', 'teams.id', '=', 'team_members.team_id')
+            ->join('activities', 'activities.id', '=', 'teams.activity_id')
+            ->select('members.firstname', 'members.lastname', 'activities.activity')
+            ->orderByDesc('members.firstname')
             ->get();
         return $data;
     }
