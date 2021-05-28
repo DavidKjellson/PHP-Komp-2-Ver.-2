@@ -405,7 +405,6 @@
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <h1>IK Svalan</h1>
             </div>
-
             <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     @foreach ($activities as $actitivty)
@@ -419,21 +418,15 @@
                         </div>
 
                         <ul class="ml-12">
+                            @foreach ($teams as $team)
+                            @if ($team->activity_id === $actitivty->id)
+
                             <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <a href="#" class="underline text-gray-900 dark:text-white">Lag 1</a>
+                                <a href="#" class="underline text-gray-900 dark:text-white">{{$team->team_name}}</a>
                             </li>
-                            <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <a href="#" class="underline text-gray-900 dark:text-white">Lag 2</a>
-                            </li>
-                            <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <a href="#" class="underline text-gray-900 dark:text-white">Lag 3</a>
-                            </li>
-                            <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <a href="#" class="underline text-gray-900 dark:text-white">Lag 4</a>
-                            </li>
-                            <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <a href="#" class="underline text-gray-900 dark:text-white">Lag 5</a>
-                            </li>
+                            @endif
+
+                            @endforeach
                         </ul>
                     </div>
                     @endforeach
