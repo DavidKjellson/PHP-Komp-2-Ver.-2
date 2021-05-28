@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\AIController;
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\WelcomeController;
 

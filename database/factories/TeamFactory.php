@@ -31,6 +31,7 @@ class TeamFactory extends Factory
      *
      * @return array
      */
+
     public function definition()
     {
         return [
