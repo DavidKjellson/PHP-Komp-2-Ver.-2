@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AIController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\WelcomeController;
 
@@ -18,6 +19,8 @@ use App\Http\Controllers\WelcomeController;
 */
 
 Route::get('/', [WelcomeController::class, 'welcome']);
+
+Route::get('/teams/{id}', [TeamController::class, 'teams']);
 
 Route::get('insertactivities', [ActivityController::class, 'index']);
 

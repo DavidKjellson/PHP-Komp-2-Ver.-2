@@ -9,4 +9,9 @@ class Member extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    public function teams()
+    {
+        return $this->belongsTo(Team::class, 'teams.id');
+    }
 }

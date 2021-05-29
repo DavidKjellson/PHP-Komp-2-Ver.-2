@@ -11,16 +11,16 @@ class Team extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'team_name',
+        'team_id',
     ];
 
-    public function activity()
-    {
-        return $this->belongsTo(Activity::class);
-    }
+    // public function activity()
+    // {
+    //     return $this->belongsTo(Activity::class);
+    // }
 
     public function members()
     {
-        return $this->belongsToMany(Members::class);
+        return $this->hasMany(Members::class);
     }
 }
