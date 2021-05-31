@@ -10,6 +10,10 @@ class Member extends Model
     use HasFactory;
     public $timestamps = false;
 
+    protected $fillable = [
+        'team_id',
+    ];
+
     public function teams()
     {
         return $this->belongsTo(Team::class);

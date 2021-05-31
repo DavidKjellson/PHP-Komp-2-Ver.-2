@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Team;
-use App\Models\Member;
+use \Illuminate\Support\Facades\DB;
+
 
 class TeamController extends Controller
 {
@@ -17,7 +17,18 @@ class TeamController extends Controller
         //     'members' => $members
         // ]);
         $team = Team::find($id);
-        $members = Member::all();
+        // $members = Member::find($id);
+
+        // DB::enableQueryLog();
+        $members = DB::table('members')
+            ->join('team_members', 'team_members.member_id', '=', 'members.id')
+            ->join('teams', 'teams.id', '=', 'team_members.team_id')
+            ->join('activities', 'activities.id', '=', 'teams.activity_id')
+            ->select('members.firstname', 'members.lastname', 'activities.activity', 'teams.team_name')
+            ->where('team_members.team_id', '=', $id)
+            ->orderByDesc('members.firstname')
+            ->get();
+        // dd(DB::getQueryLog());
 
         // select * from members
         // join team_members on team_members.member_id = members.id
