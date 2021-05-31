@@ -14,31 +14,24 @@
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8" style="width: 50%;">
       <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-        <h1>{{$team->team_name}} {{request()->id}}</h1>
+        <h1>{{$team->team_name}}</h1>
       </div>
-      <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="p-6">
-            <div class="flex items-center">
-              <div class="ml-4 text-lg leading-7 font-semibold">
-
-                <h2 class="text-center">Medlemmar</h2>
-
-              </div>
-            </div>
-
-            <ul class="ml-12">
-              @foreach ($members as $member)
-              <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                {{$member->firstname }} {{$member->lastname}}
-              </li>
-              @endforeach
-
-            </ul>
-          </div>
-        </div>
-      </div>
-
+      <table id="customers">
+        <tr>
+          <th>Name</th>
+          <th>Birthday</th>
+          <th>E-mail</th>
+          <th>Member Fee</th>
+        </tr>
+        @foreach ($members as $member)
+        <tr>
+          <td>{{$member->firstname}} {{$member->lastname}}</td>
+          <td>{{$member->birthday}}</td>
+          <td><a href="mailto:{{$member->email}}">{{$member->email}}</a></td>
+          <td>€{{$member->member_fee}}</td>
+        </tr>
+        @endforeach
+      </table>
       <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
         <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
           Copyright © 2021 by David Kjellson. All Rights Reserved. Or something.
