@@ -17,7 +17,14 @@ class TeamController extends Controller
         //     'members' => $members
         // ]);
         $team = Team::find($id);
-        $members = Member::with('team')->where('id', '=', $id);
-        return view('teams', ['team' => $team])->with('members', $members);
+        $members = Member::all();
+
+        // select * from members
+        // join team_members on team_members.member_id = members.id
+        // join teams on teams.id = team_members.team_id
+        // where teams.id = $id
+
+
+        return view('teams', ['team' => $team, 'members' => $members]);
     }
 }

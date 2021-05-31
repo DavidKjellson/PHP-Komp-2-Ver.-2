@@ -12,6 +12,6 @@ class Member extends Model
 
     public function teams()
     {
-        return $this->belongsTo(Team::class, 'teams.id');
+        return $this->belongsTo(Team::class);
     }
 }

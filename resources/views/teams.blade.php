@@ -30,7 +30,7 @@
             <ul class="ml-12">
               @foreach ($members as $member)
               <li class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                <a href="/teams/{{$team->id}}" class="underline text-gray-900 dark:text-white"> {{$member->firstname }}</a>
+                {{$member->firstname }} {{$member->lastname}}
               </li>
               @endforeach
             </ul>
