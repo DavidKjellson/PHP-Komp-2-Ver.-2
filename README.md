@@ -1,6 +1,6 @@
 # Kompletteringsuppgift Laravel
 
-- [ ] Skapa en webbplats till IK Svalan - OBS. Ingen auth-funktionalitet.
+- [x] Skapa en webbplats till IK Svalan - OBS. Ingen auth-funktionalitet.
 
 - [x] En medlem ska ha egenskaperna firstname, lastname, birthday, email och member_fee.
 
@@ -12,9 +12,9 @@
 
 - [x] Använd migration-filer för att skapa databastabellerna.
 
-- [ ] Låt webbplatsens URIer följa standard för REST API
+- [x] Låt webbplatsens URIer följa standard för REST API
 
-- [ ] Låt webbplatsen följa MVC-modellen 
+- [x] Låt webbplatsen följa MVC-modellen 
 
 - [x] Använd seeders och factories för att skapa medlemmar och lag. 100 medlemmar och 15 lag/träningsgrupper.
 
