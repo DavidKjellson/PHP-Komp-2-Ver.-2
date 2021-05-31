@@ -8,7 +8,7 @@
 
 - [x] En medlem kan vara med i flera aktiviteter (exempelvis spela fotboll i F08 och åka skidor i motionsgruppen).
 
-- [ ] En besökare ska kunna se alla lag, klicka på ett lag och se vilka som är med i det.
+- [x] En besökare ska kunna se alla lag, klicka på ett lag och se vilka som är med i det.
 
 - [x] Använd migration-filer för att skapa databastabellerna.
 
